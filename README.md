@@ -2,7 +2,7 @@
 
 **Repository:** [github.com/eligapris/software-architect](https://github.com/eligapris/software-architect)
 
-A Cursor/Codex agent skill that acts as a senior software architecture consultant. It analyzes your application holistically, recommends sustainable patterns, enforces consistency across features, and documents decisions so future sessions build on prior work instead of contradicting it.
+An agent skill for **Cursor**, **Claude Code**, **Codex**, **Qwen Code**, and any skills-compatible agent. It acts as a senior software architecture consultant — analyzes your application holistically, recommends sustainable patterns, enforces consistency across features, and documents decisions so future sessions build on prior work instead of contradicting it.
 
 ## What it does
 
@@ -19,7 +19,7 @@ The skill follows a five-step workflow: **Discover → Diagnose → Decide → D
 
 | Component | Requirement |
 |-----------|-------------|
-| Agent | Cursor, Codex, or any agent that supports skills |
+| Agent | Cursor, Claude Code, Codex, Qwen Code, or any skills-compatible agent |
 | Scripts | Python 3.8+ (stdlib only — no pip install needed) |
 | Your project | Optional: `docs/adr/` and `architecture.config.json` for full validation |
 
@@ -27,7 +27,7 @@ The skill follows a five-step workflow: **Discover → Diagnose → Decide → D
 
 ### Recommended — Skills CLI (`npx skills`)
 
-The fastest way to install for Cursor, Codex, and other supported agents:
+The fastest way to install for Cursor, Claude Code, Codex, Qwen Code, and other supported agents:
 
 ```bash
 npx skills add eligapris/software-architect -g -y
@@ -55,14 +55,28 @@ npx skills update                      # update installed skills
 
 Use this when you want ADR scaffolding, dependency analysis, and architecture validation on your projects:
 
+**Cursor**
+
 ```bash
 git clone https://github.com/eligapris/software-architect.git ~/.cursor/skills/software-architect
 ```
 
-**Codex:**
+**Claude Code**
+
+```bash
+git clone https://github.com/eligapris/software-architect.git ~/.claude/skills/software-architect
+```
+
+**Codex**
 
 ```bash
 git clone https://github.com/eligapris/software-architect.git ~/.codex/skills/software-architect
+```
+
+**Qwen Code**
+
+```bash
+git clone https://github.com/eligapris/software-architect.git ~/.qwen/skills/software-architect
 ```
 
 ### Project-level (team shared)
