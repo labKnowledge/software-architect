@@ -27,16 +27,18 @@ The skill follows a five-step workflow: **Discover → Diagnose → Decide → D
 
 ### Recommended — Skills CLI (`npx skills`)
 
-The fastest way to install for Cursor, Claude Code, Codex, Qwen Code, and other supported agents:
+The fastest way to install for Cursor, Claude Code, Codex, and Qwen Code:
 
 ```bash
-npx skills add eligapris/software-architect -g -y
+npx skills add eligapris/software-architect -g -y \
+  -a cursor -a claude-code -a qwen-code -a codex
 ```
 
 | Flag | Purpose |
 |------|---------|
 | `-g` | Install globally (user-level, all projects) |
 | `-y` | Skip confirmation prompts |
+| `-a` | Target agents (pin the ones you use; omit to install to all detected agents) |
 
 **Verify / update:**
 
