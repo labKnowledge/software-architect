@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "software-architect": {
+      "source": "labKnowledge/software-architect",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "0d4f573fa25fa3f87b4fa1aab3801e6ff7438a307c03f80a9624c485aefe6efc"
+    }
+  }
+}

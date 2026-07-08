@@ -1,5 +1,7 @@
 # Software Architect
 
+**Repository:** [github.com/labKnowledge/software-architect](https://github.com/labKnowledge/software-architect)
+
 A Cursor/Codex agent skill that acts as a senior software architecture consultant. It analyzes your application holistically, recommends sustainable patterns, enforces consistency across features, and documents decisions so future sessions build on prior work instead of contradicting it.
 
 ## What it does
@@ -23,35 +25,58 @@ The skill follows a five-step workflow: **Discover → Diagnose → Decide → D
 
 ## Installation
 
-Skills are directories with a `SKILL.md` file at the root. Copy or symlink this entire folder into one of the locations below.
+### Recommended — Skills CLI (`npx skills`)
 
-### Cursor (personal — all projects)
+The fastest way to install for Cursor, Codex, and other supported agents:
 
 ```bash
-mkdir -p ~/.cursor/skills
-cp -r /path/to/software-architect ~/.cursor/skills/
+npx skills add labKnowledge/software-architect -g -y
 ```
 
-Or clone directly:
+| Flag | Purpose |
+|------|---------|
+| `-g` | Install globally (user-level, all projects) |
+| `-y` | Skip confirmation prompts |
+
+**Other useful commands:**
 
 ```bash
-git clone <repo-url> ~/.cursor/skills/software-architect
+npx skills find software architect   # search the registry
+npx skills check                       # check for updates
+npx skills update                      # update installed skills
 ```
 
-### Cursor (project — shared with the team)
+Browse the ecosystem at [skills.sh](https://skills.sh/).
+
+> **Scripts note:** `npx skills add` installs the agent skill (`SKILL.md`) for chat use. For the Python tooling (`scripts/`, `templates/`, `references/`), clone the full repository (below).
+
+### Full install — git clone (includes scripts)
+
+Use this when you want ADR scaffolding, dependency analysis, and architecture validation on your projects:
 
 ```bash
-mkdir -p .cursor/skills
-cp -r /path/to/software-architect .cursor/skills/
+git clone https://github.com/labKnowledge/software-architect.git ~/.cursor/skills/software-architect
+```
+
+**Codex:**
+
+```bash
+git clone https://github.com/labKnowledge/software-architect.git ~/.codex/skills/software-architect
+```
+
+### Project-level (team shared)
+
+```bash
+git clone https://github.com/labKnowledge/software-architect.git .cursor/skills/software-architect
 ```
 
 Commit `.cursor/skills/software-architect/` so teammates get the same guidance.
 
-### Codex
+### Manual copy
 
 ```bash
-mkdir -p ~/.codex/skills
-cp -r /path/to/software-architect ~/.codex/skills/
+git clone https://github.com/labKnowledge/software-architect.git /tmp/software-architect
+cp -r /tmp/software-architect ~/.cursor/skills/software-architect
 ```
 
 ### Verify installation
@@ -97,10 +122,10 @@ Should I add GraphQL here, or stay with REST? Check against our existing ADRs.
 
 Scripts live in `scripts/` and are meant to be run **against your application repo**, not the skill folder itself.
 
-Set a convenience variable (optional):
+Set a convenience variable (requires the **full git clone**, not `npx skills` alone):
 
 ```bash
-export SKILL_DIR=~/.cursor/skills/software-architect
+export SKILL_DIR=~/.cursor/skills/software-architect   # or ~/.codex/skills/software-architect
 ```
 
 #### Initialize ADR documentation
