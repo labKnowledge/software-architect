@@ -1,6 +1,6 @@
 # Software Architect
 
-**Repository:** [github.com/labKnowledge/software-architect](https://github.com/labKnowledge/software-architect)
+**Repository:** [github.com/eligapris/software-architect](https://github.com/eligapris/software-architect)
 
 A Cursor/Codex agent skill that acts as a senior software architecture consultant. It analyzes your application holistically, recommends sustainable patterns, enforces consistency across features, and documents decisions so future sessions build on prior work instead of contradicting it.
 
@@ -30,7 +30,7 @@ The skill follows a five-step workflow: **Discover → Diagnose → Decide → D
 The fastest way to install for Cursor, Codex, and other supported agents:
 
 ```bash
-npx skills add labKnowledge/software-architect -g -y
+npx skills add eligapris/software-architect -g -y
 ```
 
 | Flag | Purpose |
@@ -55,19 +55,19 @@ Browse the ecosystem at [skills.sh](https://skills.sh/).
 Use this when you want ADR scaffolding, dependency analysis, and architecture validation on your projects:
 
 ```bash
-git clone https://github.com/labKnowledge/software-architect.git ~/.cursor/skills/software-architect
+git clone https://github.com/eligapris/software-architect.git ~/.cursor/skills/software-architect
 ```
 
 **Codex:**
 
 ```bash
-git clone https://github.com/labKnowledge/software-architect.git ~/.codex/skills/software-architect
+git clone https://github.com/eligapris/software-architect.git ~/.codex/skills/software-architect
 ```
 
 ### Project-level (team shared)
 
 ```bash
-git clone https://github.com/labKnowledge/software-architect.git .cursor/skills/software-architect
+git clone https://github.com/eligapris/software-architect.git .cursor/skills/software-architect
 ```
 
 Commit `.cursor/skills/software-architect/` so teammates get the same guidance.
@@ -75,7 +75,7 @@ Commit `.cursor/skills/software-architect/` so teammates get the same guidance.
 ### Manual copy
 
 ```bash
-git clone https://github.com/labKnowledge/software-architect.git /tmp/software-architect
+git clone https://github.com/eligapris/software-architect.git /tmp/software-architect
 cp -r /tmp/software-architect ~/.cursor/skills/software-architect
 ```
 
