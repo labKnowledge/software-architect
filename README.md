@@ -38,15 +38,16 @@ npx skills add eligapris/software-architect -g -y
 | `-g` | Install globally (user-level, all projects) |
 | `-y` | Skip confirmation prompts |
 
-**Other useful commands:**
+**Verify / update:**
 
 ```bash
-npx skills find software architect   # search the registry
 npx skills check                       # check for updates
 npx skills update                      # update installed skills
 ```
 
-Browse the ecosystem at [skills.sh](https://skills.sh/).
+**Listing page:** [skills.sh/eligapris/software-architect/software-architect](https://skills.sh/eligapris/software-architect/software-architect)
+
+> Install with the `npx skills add` command above. `npx skills find` only surfaces skills after skills.sh has indexed install telemetry — use the direct `add` / page URL until then.
 
 > **Scripts note:** `npx skills add` installs the agent skill (`SKILL.md`) for chat use. For the Python tooling (`scripts/`, `templates/`, `references/`), clone the full repository (below).
 
