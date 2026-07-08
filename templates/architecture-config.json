@@ -1,0 +1,66 @@
+{
+  "moduleBoundaries": [
+    {
+      "name": "domain",
+      "path": "src/domain",
+      "allowedImports": ["src/domain"],
+      "forbiddenPatterns": [
+        "prisma", "typeorm", "sequelize", "mongoose",
+        "express", "fastify", "@nestjs",
+        "kafkajs", "redis", "aws-sdk",
+        "axios", "node-fetch", "fetch",
+        "sqlalchemy", "django", "flask", "fastapi",
+        "psycopg2", "pymongo", "redis",
+        "boto3", "requests", "httpx"
+      ]
+    },
+    {
+      "name": "application",
+      "path": "src/application",
+      "allowedImports": ["src/domain", "src/application"],
+      "forbiddenPatterns": [
+        "prisma", "typeorm", "sequelize", "mongoose",
+        "express", "fastify", "@nestjs",
+        "kafkajs", "redis",
+        "sqlalchemy", "django", "flask", "fastapi",
+        "psycopg2", "pymongo", "redis"
+      ]
+    },
+    {
+      "name": "infrastructure",
+      "path": "src/infrastructure",
+      "allowedImports": ["src/domain", "src/application", "src/infrastructure"],
+      "forbiddenPatterns": []
+    },
+    {
+      "name": "presentation",
+      "path": "src/presentation",
+      "allowedImports": ["src/domain", "src/application", "src/presentation"],
+      "forbiddenPatterns": [
+        "prisma", "typeorm", "sequelize", "mongoose",
+        "sqlalchemy", "psycopg2", "pymongo"
+      ]
+    }
+  ],
+  "maxMetrics": {
+    "circularDependencies": 0,
+    "maxEfferentCoupling": 10,
+    "maxFileLength": 300,
+    "maxFunctionLength": 50
+  },
+  "dataAccessConsistency": {
+    "ormPatterns": [
+      "prisma", "typeorm", "sequelize", "mongoose", "@prisma/client",
+      "sqlalchemy", "django.db", "flask_sqlalchemy", "tortoise"
+    ],
+    "rawPatterns": [
+      "pg", "mysql2", "mongodb", "oracledb", "better-sqlite3",
+      "psycopg2", "pymongo", "aiomysql", "asyncpg"
+    ]
+  },
+  "frameworkCouplingPatterns": [
+    "@Injectable", "@Controller", "@Module", "@Component",
+    "@Entity", "@Column", "@Table", "@Schema",
+    "@Inject", "@Autowired"
+  ]
+}
